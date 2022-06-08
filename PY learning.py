@@ -5,6 +5,9 @@
 ## Lists
 
 ## string type list
+from types import MethodDescriptorType
+
+
 mylist = ["apple","banana","cherry"]
 print(mylist)
 ## index print
@@ -348,3 +351,160 @@ print(CarsList)
 print(andAll)
 
 ## cycle across tuple
+mytuple = ("Hi","My","bmw","honda")
+for x in mytuple:
+    print(x)
+## cycle on index numbers
+mytuple = ("Hi","My","bmw","honda")
+for i in range(len(mytuple)):
+    print(mytuple[i])
+## use while
+mytuple = ("Hi","My","bmw","honda")
+i = 0
+while i < len(mytuple):
+    print(mytuple[i])
+    i = i + 1
+
+## join tuples
+mytuple1 = ("1","2","3")
+mytuple2 = (1,2,3)
+mytuple3 = mytuple1 + mytuple2
+print(mytuple3)
+## multiply tuples *
+mytuple = ("Hi","My","bmw","honda")
+mytuple1 = mytuple * 2
+print(mytuple1)
+
+## tuples methods
+##count()-Returns the number of times a specified value occurs in a 
+# tuple
+##index()-Searches the tuple for a specified value and returns the 
+# position of where it was found
+
+
+## Sets
+
+## set
+myset = {"string1", "string2", "string3"}
+print(myset)
+## duplicates not allowed - sets ignore duplicates
+myset = {"string1", "string2", "string3", "string1"}
+print(myset)
+## length set
+myset = {"string1", "string2", "string3"}
+print(len(myset))
+## set data types
+myset1 = {"1", "2", "3", "4", "5"}
+myset2 = {1, 2, 3, 4, 5}
+myset3 = {True, False}
+myset4 = {1.2, 1.3, 1.5, 5.5}
+myset5 = {"2", "go", 22, 323, True, 2.4, 5.5}
+print(myset1)
+print(myset2)
+print(myset3)
+print(myset4)
+print(myset5)
+## set type
+myset5 = {"2", "go", 22, 323, True, 2.4, 5.5}
+print(type(myset1))
+## use set constructor
+myset = set(("2", "go", 22, 323, True, 2.4, 5.5))
+print(myset)
+
+## set elemnts acess - cycle
+myset = {"2", "go", 22, 323, True, 2.4, 5.5}
+for x in myset:
+    print(myset)
+## search element in set
+myset = {"2", "go", 22, 323, True, 2.4, 5.5}
+print("go" in myset)
+## add element in set
+myset = {"2", "go", 22, 323, True, 2.4, 5.5}
+myset.add("rakamakafo")
+print(myset)
+## add set to set
+myset = {"2", "go", 22, 323, True, 2.4, 5.5}
+myset1 = {"333","bmw","plane"}
+myset.update(myset1)
+print(myset)
+## add list to set
+myset = {"2", "go", 22, 323, True, 2.4, 5.5}
+mylist = ["333","bmw","plane"]
+myset.update(mylist)
+print(myset)
+## remove item
+myset = {"2", "go", 22, 323, True, 2.4, 5.5}
+myset.remove("2")
+print(myset)
+## remove item
+myset = {"2", "go", 22, 323, True, 2.4, 5.5}
+myset.discard("2")
+print(myset)
+## remove end item
+myset = {"2", "go", 22, 323, True, 2.4, 5.5}
+x = myset.pop()
+print(x)
+print(myset)
+## clear set
+myset = {"2", "go", 22, 323, True, 2.4, 5.5}
+myset.clear()
+print(myset)
+## delete set
+myset = {"2", "go", 22, 323, True, 2.4, 5.5}
+del myset
+print(myset)
+
+## set cycles
+myset = {"2", "go", 22, 323, True, 2.4, 5.5}
+for x in myset:
+    print(x)
+
+## join sets
+myset = {"2", "go", 22, 323, True, 2.4, 5.5}
+myset1 = {"yes", "no", 33, 444} 
+myset3 = myset1.union(myset2)
+print(myset3)
+## paste set element
+myset = {"2", "go", 22, 323, True, 2.4, 5.5}
+myset1 = {"yes", "no", 33, 444} 
+myset.update(myset1)
+print(myset)
+## save only duplicates
+myset = {"2", "go", 22, 323, True, 2.4, 5.5}
+myset1 = {"2", "go", 33, 444} 
+myset.intersection_update(myset1)
+print(myset)
+## return duplicates elements in set1 and set2 in new set
+myset = {"2", "go", 22, 323, True, 2.4, 5.5}
+myset1 = {"2", "go", 33, 444} 
+myset2 = myset.intersection(myset1)
+print(myset2)
+## save all but not duplicates
+myset = {"2", "go", 22, 323, True, 2.4, 5.5}
+myset1 = {"2", "go", 33, 444} 
+myset.symmetric_difference_update(myset1)
+print(myset)
+## save duplicates
+myset = {"2", "go", 22, 323, True, 2.4, 5.5}
+myset1 = {"2", "go", 33, 444} 
+myset3 = myset.symmetric_difference(myset1)
+print(myset3)
+## set methods
+#add()	Adds an element to the set
+#clear()	Removes all the elements from the set
+#copy()	Returns a copy of the set
+#difference()	Returns a set containing the difference between two or more sets
+#difference_update()	Removes the items in this set that are also included in another, specified set
+#discard()	Remove the specified item
+#intersection()	Returns a set, that is the intersection of two other sets
+#intersection_update()	Removes the items in this set that are not present in other, specified set(s)
+#isdisjoint()	Returns whether two sets have a intersection or not
+#issubset()	Returns whether another set contains this set or not
+#issuperset()	Returns whether this set contains another set or not
+#pop()	Removes an element from the set
+#remove()	Removes the specified element
+#symmetric_difference()	Returns a set with the symmetric differences of two sets
+#symmetric_difference_update()	inserts the symmetric differences from this set and another
+#union()	Return a set containing the union of sets
+#update()	Update the set with the union of this set and others
+
