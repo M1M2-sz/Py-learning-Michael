@@ -70,3 +70,65 @@ print(mylist)
 mylist = ["apple","banana","cherry","orange","kiwi","mango"]
 mylist.insert(2,"coca-cola")
 print(mylist) 
+## add element to end of list
+mylist = ["apple","banana","cherry","orange","kiwi","mango"]
+mylist.append("coca-cola")
+print(mylist) 
+## add in 1 list + 1 list
+mylist = ["apple","banana","cherry","orange","kiwi","mango"]
+mylist1 = ["go","run","fast"]
+mylist.extend(mylist1)
+print(mylist) 
+## remove elements
+mylist = ["apple","banana","cherry","orange","kiwi","mango"]
+mylist.remove("banana")
+print(mylist) 
+## remove elements with index
+mylist = ["apple","banana","cherry","orange","kiwi","mango"]
+mylist.pop(1)
+print(mylist) 
+## remove last element of list index 
+mylist = ["apple","banana","cherry","orange","kiwi","mango"]
+mylist.pop()
+print(mylist) 
+## delete element list with index  
+mylist = ["apple","banana","cherry","orange","kiwi","mango"]
+del mylist[0]
+print(mylist) 
+## delete list
+mylist = ["apple","banana","cherry","orange","kiwi","mango"]
+del mylist
+print(mylist) 
+## clear list
+mylist = ["apple","banana","cherry","orange","kiwi","mango"]
+mylist.clear()
+print(mylist) 
+## elements of list in cycle
+mylist = ["apple","banana","cherry","orange","kiwi","mango"]
+for x in mylist:
+    print(x) 
+## cycle with numbers of index
+mylist = ["apple","banana","cherry","orange","kiwi","mango"]
+for i in range(len(mylist)):
+    print(mylist[i]) 
+## use while
+mylist = ["apple","banana","cherry","orange","kiwi","mango"]
+i = 0
+while i < len(mylist):
+    print(mylist[i])
+    i = i + 1 
+## list comrehension
+mylist = ["apple","banana","cherry","orange","kiwi","mango"]
+[print(x) for x in mylist] 
+## list comrehension - cycle with new elements old list at "b"
+mylist = ["apple","banana","cherry","orange","kiwi","mango"]
+newlist = []
+for x in mylist:
+    if "b" in x:
+        newlist.append(x)
+print(newlist) 
+## list comrehension - cycle with new elements old list at "a"
+mylist = ["apple","banana","cherry","orange","kiwi","mango"]
+newlist = [x for x in mylist if "b" in x]
+print(newlist)
+## 
