@@ -181,3 +181,117 @@ mylist = [10,20,33,22,1,2,4,3]
 mylist.sort(reverse = True)
 print(mylist)
 ## customize sort function
+def sortfunc(n):
+    return abs(n - 20)
+mylist = [10,20,33,22,1,2,4,3]
+mylist.sort(key = sortfunc)
+print(mylist)
+## sort with register
+mylist = ["Apple","banana","cherry","Orange","Kiwi","mango"]
+mylist.sort()
+print(mylist)
+## sort without register
+mylist = ["Apple","banana","cherry","Orange","Kiwi","mango"]
+mylist.sort(key = str.lower)
+print(mylist)
+# revers sort without register
+mylist = ["Apple","banana","cherry","Orange","Kiwi","mango"]
+mylist.reverse()
+print(mylist)
+
+## copy lists
+mylist = ["Apple","banana","cherry","Orange","Kiwi","mango"]
+newlist = mylist.copy()
+print(newlist)
+print(mylist)
+## copy lists
+mylist = ["Apple","banana","cherry","Orange","Kiwi","mango"]
+newlist = list(mylist)
+print(newlist)
+print(mylist)
+
+## join two lists
+mylist = ["Apple","banana","cherry","Orange","Kiwi","mango"]
+mylist1 = [1,2,3,4,66,77]
+newlist = mylist + mylist1
+print(newlist)
+## join two lists in one of joined
+mylist = ["Apple","banana","cherry","Orange","Kiwi","mango"]
+mylist1 = [1,2,3,4,66,77]
+for x in mylist1:
+    mylist.append(x)
+print(mylist)
+## extend method
+mylist = ["Apple","banana","cherry","Orange","Kiwi","mango"]
+mylist1 = [1,2,3,4,66,77]
+mylist1.extend(mylist)
+print(mylist1)
+
+## methods
+# append()	Adds an element at the end of the list
+#clear()	Removes all the elements from the list
+#copy()	Returns a copy of the list
+#count()	Returns the number of elements with the specified value
+#extend()	Add the elements of a list (or any iterable), to the end of the current list
+#index()	Returns the index of the first element with the specified value
+#insert()	Adds an element at the specified position
+#pop()	Removes the element at the specified position
+#remove()	Removes the item with the specified value
+#reverse()	Reverses the order of the list
+#sort()	Sorts the list 
+
+
+# Tuples
+
+## tuple
+mytuple = ("Apple","banana","cherry","Orange","Kiwi","mango")
+print(mytuple)
+## tuple lenghth
+mytuple = ("Apple","banana","cherry","Orange","Kiwi","mango")
+print(len(mytuple))
+## create tuple with one element
+mytuple = ("Apple",)
+print(type(mytuple))
+## tuple types: string, integer,boolean
+mytuple1 = ("1","2","3")
+mytuple2 = (1,2,3)
+mytuple3 = (True, False, False)
+print(mytuple1)
+print(mytuple2)
+print(mytuple3)
+## different data tuples
+mytupleDif = ("Hi","My",2,True ,"5",False)
+print(mytupleDif)
+## type of tuple
+mytupleDif = ("Hi","My",2,True ,"5",False)
+print(type(mytupleDif))
+## tuple constructor
+mytuple = tuple(("Hi","My",2,True ,"5",False))
+print(mytuple) 
+## acces to tuple elements
+mytuple = ("Hi","My",2,True ,"5",False)
+print(mytuple[0]) 
+## negative tuple indexing
+mytuple = ("Hi","My",2,True ,"5",False)
+print(mytuple[-2]) 
+## index range
+mytuple = ("Hi","My",2,True ,"5",False)
+print(mytuple[1:4]) 
+## start index range
+mytuple = ("Hi","My",2,True ,"5",False)
+print(mytuple[:4]) 
+## include index range
+mytuple = ("Hi","My",2,True ,"5",False)
+print(mytuple[4:])
+## negative index range
+mytuple = ("Hi","My",2,True ,"5",False)
+print(mytuple[-4:-1])
+## negative index include  
+mytuple = ("Hi","My",2,True ,"5",False)
+print(mytuple[:-4:-1])
+## check element of tuple
+mytuple = ("Hi","My",2,True ,"5",False)
+if "Hi" in mytuple:
+    print("Yes, Hi in tuple") 
+
+## update tuples
