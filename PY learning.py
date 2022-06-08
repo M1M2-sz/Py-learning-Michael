@@ -23,10 +23,20 @@ print(mylist[3:])
 ## -index print
 mylist = ["apple","banana","cherry","orange","kiwi","mango"]
 print(mylist[-5:-3])
+## index print
+mylist = ["apple","banana","cherry"]
+print(mylist[0])
+print(mylist[-2])
+
 ## search string
 mylist = ["apple","banana","cherry","orange","kiwi","mango"]
 if "apple" in mylist:
     print("Yes,this 'apple' in list")
+## search string in list 
+mylist = ["apple","banana","cherry","orange","kiwi","mango"]
+if "apple" in mylist:
+    print("Yes,this 'apple' in list")
+
 ## lenght
 mylist = ["apple","banana","cherry"]
 print(len(mylist))
@@ -39,17 +49,10 @@ list2 = [1,2,3]
 list3 = [True,False,False]
 ## more types
 list1 = ["string1",1,True,33,"bogdan"]
-## list constructor list
+
+## list constructor 
 mylist = list(("string1","string2","string3"))
 print(mylist)
-## index print
-mylist = ["apple","banana","cherry"]
-print(mylist[0])
-print(mylist[-2])
-## search string in list 
-mylist = ["apple","banana","cherry","orange","kiwi","mango"]
-if "apple" in mylist:
-    print("Yes,this 'apple' in list")
 ## edit list
 mylist = ["apple","banana","cherry","orange","kiwi","mango"]
 mylist[1] = "banana1"
@@ -103,6 +106,7 @@ print(mylist)
 mylist = ["apple","banana","cherry","orange","kiwi","mango"]
 mylist.clear()
 print(mylist) 
+
 ## elements of list in cycle
 mylist = ["apple","banana","cherry","orange","kiwi","mango"]
 for x in mylist:
@@ -131,4 +135,49 @@ print(newlist)
 mylist = ["apple","banana","cherry","orange","kiwi","mango"]
 newlist = [x for x in mylist if "b" in x]
 print(newlist)
-## 
+## condition of filter elements
+mylist = ["apple","banana","cherry","orange","kiwi","mango"]
+newlist = [x for x in mylist if x != "apple"]
+print(newlist)
+## without if
+mylist = ["apple","banana","cherry","orange","kiwi","mango"]
+newlist = [x for x in mylist]
+print(newlist)
+## range function for iteration
+mylist = ["apple","banana","cherry","orange","kiwi","mango"]
+newlist = [x for x in range(5)]
+print(newlist)
+## range function of iteration x < ...
+mylist = ["apple","banana","cherry","orange","kiwi","mango"]
+newlist = [x for x in range(5) if x < 2]
+print(newlist)
+## expression - add upper register at all elements in list
+mylist = ["apple","banana","cherry","orange","kiwi","mango"]
+newlist = [x.upper() for x in mylist]
+print(newlist)
+## add "hello" for all elements in list
+mylist = ["apple","banana","cherry","orange","kiwi","mango"]
+newlist = ["hello" for x in mylist]
+print(newlist)
+## back "orange" without "banana"
+mylist = ["apple","banana","cherry","orange","kiwi","mango"]
+newlist = [x if x != "banana" else "orange" for x in mylist]
+print(newlist)
+
+## sort list with register
+mylist = ["apple","banana","cherry","orange","kiwi","mango"]
+mylist.sort()
+print(mylist)
+## sort list with numbers
+mylist = [10,20,33,22,1,2,4,3]
+mylist.sort()
+print(mylist)
+## sort descending
+mylist = ["apple","banana","cherry","orange","kiwi","mango"]
+mylist.sort(reverse = True)
+print(mylist)
+## sort descending
+mylist = [10,20,33,22,1,2,4,3]
+mylist.sort(reverse = True)
+print(mylist)
+## customize sort function
