@@ -295,3 +295,56 @@ if "Hi" in mytuple:
     print("Yes, Hi in tuple") 
 
 ## update tuples
+mytuple = ("Hi","My",2,True ,"5",False)
+mylist = list(mytuple)
+mylist[1] = "MyApple"
+mytuple = tuple(mylist)
+print(type(mytuple))
+print(mytuple)
+## add elements
+mytuple = ("Hi","My",2,True ,"5",False)
+mylist = list(mytuple)
+mylist.append("MyApple")
+mytuple = tuple(mylist)
+print(type(mytuple))
+print(mytuple)
+## add tuple to tuple
+mytuple = ("Hi","My",2,True ,"5",False)
+mytuple1 = ("Go",2)
+mytuple += mytuple1
+print(mytuple)
+## remove elements of tuple
+mytuple = ("Hi","My",2,True ,"5",False)
+mylist = list(mytuple)
+mylist.remove("My")
+mytuple = tuple(mylist)
+print(type(mytuple))
+print(mytuple)
+## delete tuple
+mytuple = ("Hi","My",2,True ,"5",False)
+del mytuple
+print(mytuple)
+
+## pack tuple
+mytuple = ("Hi","My","Cars")
+print(mytuple)
+## unpack tuple
+(Hi,My,Cars) = mytuple
+print(Hi)
+print(My)
+print(Cars)
+## using asterisk *
+mytuple = ("Hi","My","bmw","honda")
+(Hi,My,*CarsList) = mytuple
+print(Hi)
+print(My)
+print(CarsList)
+## using asterisk * 
+mytuple = ("Hi","My","bmw","honda")
+(Hi,My,*CarsList,andAll) = mytuple
+print(Hi)
+print(My)
+print(CarsList)
+print(andAll)
+
+## cycle across tuple
