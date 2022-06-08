@@ -1,9 +1,10 @@
 
 
-##learning py
+## Learning py
 
-##Lists
-##String type list
+## Lists
+
+## string type list
 mylist = ["apple","banana","cherry"]
 print(mylist)
 ## index print
@@ -49,8 +50,23 @@ print(mylist[-2])
 mylist = ["apple","banana","cherry","orange","kiwi","mango"]
 if "apple" in mylist:
     print("Yes,this 'apple' in list")
-##Edit list
+## edit list
 mylist = ["apple","banana","cherry","orange","kiwi","mango"]
 mylist[1] = "banana1"
 print(mylist) 
-##
+## edit range lists elements
+mylist = ["apple","banana","cherry","orange","kiwi","mango"]
+mylist[1:3] = ["minions","hubabuba"]
+print(mylist) 
+## edit range and add more new 
+mylist = ["apple","banana","cherry","orange","kiwi","mango"]
+mylist[1:2] = ["minions","hubabuba"]
+print(mylist) 
+## delete element in range 
+mylist = ["apple","banana","cherry","orange","kiwi","mango"]
+mylist[1:3] = ["hubabuba"]
+print(mylist) 
+## insert new element with index
+mylist = ["apple","banana","cherry","orange","kiwi","mango"]
+mylist.insert(2,"coca-cola")
+print(mylist) 
