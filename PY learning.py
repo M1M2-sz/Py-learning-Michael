@@ -5,6 +5,7 @@
 ## Lists
 
 ## string type list
+from string import printable
 from types import MethodDescriptorType
 
 
@@ -508,3 +509,83 @@ print(myset3)
 #union()	Return a set containing the union of sets
 #update()	Update the set with the union of this set and others
 
+
+## Dictionaries 
+
+## Dictionary
+mydict = {"brand":"bmw", "model":"530", "engine type":"diesel"}
+print(mydict)
+## dictionary index
+mydict = {"brand":"bmw", "model":"530", "engine type":"diesel"}
+print(mydict["brand"])
+## non duplicates
+mydict = {"brand":"bbw", "brand":"bmw", "model":"530", "engine type":"diesel"}
+print(mydict)
+## lenth 
+mydict = {"brand":"bmw", "model":"530", "engine type":"diesel"}
+print(len(mydict))
+## types
+mydict = {"brand":"bmw", "model":"530", "engine type":"diesel"}
+print(type(mydict))
+## types
+mydict = {"brand":False, "model":12, "engine type":2.5}
+print(type(mydict))
+print(mydict)
+## access to elements
+mydict = {"brand":"bmw", "model":"530", "engine type":"diesel"}
+print(mydict["brand"])
+## get
+mydict = {"brand":"bmw", "model":"530", "engine type":"diesel"}
+print(mydict.get("brand"))
+## keys
+mydict = {"brand":"bmw", "model":"530", "engine type":"diesel"}
+print(mydict.keys())
+## keys
+mydict = {"brand":"bmw", "model":"530", "engine type":"diesel"}
+x = mydict["brand"]
+print(x)
+## get keys
+mydict = {"brand":"bmw", "model":"530", "engine type":"diesel"}
+x = mydict.keys()
+print(x)
+## add element
+mydict = {"brand":"bmw", "model":"530", "engine type":"diesel"}
+x = mydict.get("brand")
+print(x)
+## adding elements & refresh keys
+mydict = {"brand":"bmw", "model":"530", "engine type":"diesel"}
+x = mydict.keys()
+print(x)
+mydict["model"] = "550"
+print(mydict["model"])
+## get values
+mydict = {"brand":"bmw", "model":"530", "engine type":"diesel"}
+x = mydict.values()
+print(x)
+## add changes
+mydict = {"brand":"bmw", "model":"530", "engine type":"diesel"}
+x = mydict.values()
+print(x)
+mydict["model"] = "540"
+print(x)
+## get items
+mydict = {"brand":"bmw", "model":"530", "engine type":"diesel"}
+x = mydict.items()
+print(x)
+## changes after get items
+mydict = {"brand":"bmw", "model":"530", "engine type":"diesel"}
+x = mydict.items()
+print(x)
+mydict["engine type"] = "cosmo"
+print(x)
+## adding element
+mydict = {"brand":"bmw", "model":"530", "engine type":"diesel"}
+x = mydict.items()
+print(x)
+mydict["space type"] = "cosmo"
+print(x)
+## key search
+mydict = {"brand":"bmw", "model":"530", "engine type":"diesel"}
+if "bmw" in mydict:
+    print("yeah we have bmw")
+## 
