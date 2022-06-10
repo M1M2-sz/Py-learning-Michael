@@ -5,9 +5,6 @@
 ## Lists
 
 ## string type list
-from string import printable
-from types import MethodDescriptorType
-
 
 mylist = ["apple","banana","cherry"]
 print(mylist)
@@ -377,10 +374,8 @@ mytuple1 = mytuple * 2
 print(mytuple1)
 
 ## tuples methods
-##count()-Returns the number of times a specified value occurs in a 
-# tuple
-##index()-Searches the tuple for a specified value and returns the 
-# position of where it was found
+##count()-Returns the number of times a specified value occurs in a tuple
+##index()-Searches the tuple for a specified value and returns the position of where it was found
 
 
 ## Sets
@@ -490,6 +485,7 @@ myset = {"2", "go", 22, 323, True, 2.4, 5.5}
 myset1 = {"2", "go", 33, 444} 
 myset3 = myset.symmetric_difference(myset1)
 print(myset3)
+
 ## set methods
 #add()	Adds an element to the set
 #clear()	Removes all the elements from the set
@@ -676,4 +672,4 @@ print(mydict3)
 #update()	Updates the dictionary with the specified key-value pairs
 #values()	Returns a list of all the values in the dictionary
 
-## If else
+## if else
