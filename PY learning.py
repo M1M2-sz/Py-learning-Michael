@@ -588,4 +588,92 @@ print(x)
 mydict = {"brand":"bmw", "model":"530", "engine type":"diesel"}
 if "bmw" in mydict:
     print("yeah we have bmw")
-## 
+
+## change dictionary elements
+mydict = {"brand":"bmw", "model":"530", "engine type":"diesel"}
+mydict["model"] = "550"
+print(mydict)
+## update dictionary
+mydict = {"brand":"bmw", "model":"530", "engine type":"diesel"}
+mydict.update({"model":"550"})
+print(mydict)
+## adding elements
+mydict = {"brand":"bmw", "model":"530", "engine type":"diesel"}
+mydict["color"] = "black"
+print(mydict)
+## removing items
+mydict = {"brand":"bmw", "model":"530", "engine type":"diesel"}
+mydict.pop("model")
+print(mydict)
+## remove last added elemtnt
+mydict = {"brand":"bmw", "model":"530", "engine type":"diesel"}
+mydict.popitem()
+print(mydict)
+## delete elem with key
+mydict = {"brand":"bmw", "model":"530", "engine type":"diesel"}
+del mydict["model"] 
+print(mydict)
+## delete dictionary
+mydict = {"brand":"bmw", "model":"530", "engine type":"diesel"}
+del mydict
+print(mydict)
+## clear dictionary
+mydict = {"brand":"bmw", "model":"530", "engine type":"diesel"}
+mydict.clear()
+print(mydict)
+## dictionary cycle
+mydict = {"brand":"bmw", "model":"530", "engine type":"diesel"}
+for x in mydict:
+    print(x)
+## dictionary cycle 
+mydict = {"brand":"bmw", "model":"530", "engine type":"diesel"}
+for x in mydict:
+    print(mydict[x])
+## check values in dictionary
+mydict = {"brand":"bmw", "model":"530", "engine type":"diesel"}
+for x in mydict.values():
+    print(x)
+## check keys in dictionary
+mydict = {"brand":"bmw", "model":"530", "engine type":"diesel"}
+for x in mydict.keys():
+    print(x)
+## check keys and items in items method
+mydict = {"brand":"bmw", "model":"530", "engine type":"diesel"}
+for x, y in mydict.items():
+    print(x, y)
+
+## copying dictionaries
+mydict = {"brand":"bmw", "model":"530", "engine type":"diesel"}
+mydict1 = mydict.copy()
+print(mydict1)
+## copy with method dict
+mydict = {"brand":"bmw", "model":"530", "engine type":"diesel"}
+mydict1 = dict(mydict)
+print(mydict1)
+## nested dictionaries
+mydict = { "brand" : { "who" : "bmw" },
+ "model" : { "what is?": "530" }, 
+"engine type" : { "gasoline?" : "diesel" }
+}
+print(mydict)
+## adding dictionaries to dictionaries
+mydict = {"brand":"bmw", "model":"530", "engine type":"diesel"}
+mydict1 = {"bran":"bm", "mode":"53", "engine typ":"diese"}
+mydict2 = {"bra":"b", "mod":"5", "engine ty":"dies"}
+mydict3 = { "1" : mydict, "2" : mydict1, "3" : mydict2}
+print(mydict3)
+
+## dictionary methods
+#clear()	Removes all the elements from the dictionary
+#copy()	Returns a copy of the dictionary
+#fromkeys()	Returns a dictionary with the specified keys and value
+#get()	Returns the value of the specified key
+#items()	Returns a list containing a tuple for each key value pair
+#keys()	Returns a list containing the dictionary's keys
+#pop()	Removes the element with the specified key
+#popitem()	Removes the last inserted key-value pair
+#setdefault()	Returns the value of the specified key. If the key does not exist: insert the key, with the specified value
+#update()	Updates the dictionary with the specified key-value pairs
+#values()	Returns a list of all the values in the dictionary
+
+## If else
