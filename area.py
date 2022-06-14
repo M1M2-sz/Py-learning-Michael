@@ -95,7 +95,7 @@ totalarea=0
 # обнуляем переменную totalarea
 # создаем двойной цикл
 for y in range(im.height): # Для y в диапазоне (im.по высоте)
- for x in range(im.width): # Для х в диапазоне (im.по ширине)
+ for x in range(im.width): # Для х в диапазоне (im.по длинне)
   val=a[y,x] # переменная val = индексы a [y,x]
   if val[0]!=255: # если индекс 0 переменной val [red] не равен 255 то :
    count+=1 # счетчик +1
