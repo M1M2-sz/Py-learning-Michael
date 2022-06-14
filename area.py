@@ -1,5 +1,5 @@
 import numpy as np
-## Импортируем библиотеку pithon под названием numpy(numerical python extensions),
+## Импортируем библиотеку python под названием numpy(numerical python extensions),
 # под названием  np для общепринятости (все так делают что бы не писать полньстью
 # numpy - проще написать np) 
 from PIL import Image, ImageDraw
@@ -18,13 +18,25 @@ import sys
 # На пример все с началом sys. :
 # sys.setrecursionlimit(), sys.getrecursionlimit() 
 print(sys.getrecursionlimit())
-## 
+## .getrecursionlimit это функция которая возвращает текущее значение предела рекурсии,
+#  максимальную глубину стека интерпретатора Python. 
+# Этот предел предотвращает бесконечную рекурсию от переполнения стека языка C 
+# и сбоя Python. Это значение может быть установлено с помощью sys.setrecursionlimit().
 sys.setrecursionlimit(150000)
-
-def fillarea(a,x,y):
+# Функция sys.setrecursionlimit() устанавливает максимальную глубину стека 
+# интерпретатора Python для ограничения. Этот предел предотвращает бесконечную 
+# рекурсию от переполнения стека языка C и сбоя Python. 
+# Максимально возможный предел зависит от платформы. 
+def fillarea(a,x,y): ## Создаем функцию fillarea , с переменными x, y (которые принимают позже тип числа), и массивом a
   if (x<0) or (y<0) or (x>=a.shape[1]) or (y>=a.shape[0]): #borders
     return 0
-  val=a[y,x]
+    ## Описание условия:
+    # Если (x<0), или (y<0), или (x>=a.shape[1]) - [функция shape возвращает
+    #  форму массива. Массив представляет собой кортеж целых чисел.] 
+    # В данном случае условие (x>=a.shape[1]) такое: x>= индекса 1 в массиве a
+    # ... или условие (y>=a.shape[0]) - такое: y>= индекса 0 в массиве a
+    # то return 0       
+  val=a[y,x]  
   if val[0]==255: #just R
     return 0
 #  print('x=',x,'y=',y)
@@ -78,16 +90,19 @@ print('area =',count)
 
 #Method3
 count=0
+# обнуляем переменную count
 totalarea=0
-for y in range(im.height):
- for x in range(im.width):
-  val=a[y,x]
-  if val[0]!=255: #just R
-   count+=1
-   area=fillarea(a,x,y)
-   print(' i have found ',count,' figure with area = ',area)
-   totalarea+=area
-print('total area is ',totalarea)
+# обнуляем переменную totalarea
+# создаем двойной цикл
+for y in range(im.height): # Для y в диапазоне (im.по высоте)
+ for x in range(im.width): # Для х в диапазоне (im.по ширине)
+  val=a[y,x] # переменная val = индексы a [y,x]
+  if val[0]!=255: # если индекс 0 переменной val [red] не равен 255 то :
+   count+=1 # счетчик +1
+   area=fillarea(a,x,y) # переменной area присваиваем значения от fillarea а именно a, x, y
+   print(' i have found ',count,' figure with area = ',area) # выводим строку и значение count, потом еще строку и значение area
+   totalarea+=area # к переменной totalarea добавляем значение от area
+print('total area is ',totalarea) # выводим строку и значение totalarea
 
 
 img = Image.fromarray(a)
