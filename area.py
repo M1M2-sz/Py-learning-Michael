@@ -1,8 +1,24 @@
 import numpy as np
+## Импортируем библиотеку pithon под названием numpy(numerical python extensions),
+# под названием  np для общепринятости (все так делают что бы не писать полньстью
+# numpy - проще написать np) 
 from PIL import Image, ImageDraw
+## Импортируем библиотеку Pillow, с модулями Image и ImageDraw
+# Библиотека изображений Python, или PIL (Python Imaging Library) 
+# нужна для обработки графики в Python.
+# Image это класс определенный в модуле PIL.
+# ImageDraw это модуль, который  позволяет рисовать 
+# используя или систему относительных координат, или методы рисования 
+# которые начинаются на draw:
+# draw.polygon , draw.ellipse , draw.rectangle , и прочие.
+# То есть из PIL мы импортируем класс Image, и модуль ImageDraw
 import sys
-
+## sys это модуль который обеспечивает доступ к некоторым переменным и функциям, 
+# взаимодействующим с интерпретатором python.
+# На пример все с началом sys. :
+# sys.setrecursionlimit(), sys.getrecursionlimit() 
 print(sys.getrecursionlimit())
+## 
 sys.setrecursionlimit(150000)
 
 def fillarea(a,x,y):
