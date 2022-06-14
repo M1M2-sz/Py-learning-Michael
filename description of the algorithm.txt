@@ -26,4 +26,39 @@ Step|x|y|_x|_y|NewX|NewY|
 Эти координаты удаляют (или добавляют если заливка) точки на плоскость.
 То есть мы нашли 9 координат(по step), соотв 9 точек на карте и их удалили(или добавили если заливка)
 
+Описание методов.
+Метод 1
 
+count=0
+# обнуляем переменную count
+for y in range(im.height):# для y в диапазоне (im.по высоте)
+ for val in a[y]:# для val в a с индексом [y]
+  if (val[0]!=255):# если индекс 0 переменной val [red] не равен 255 то :
+   count+=1# счетчик +1
+print('area =',count)# выводим строку и значение count
+
+Метод 2 с внутренним циклом х 
+count=0
+# обнуляем переменную count
+for y in range(im.height):# Для y в диапазоне (im.по высоте)
+ for x in range(im.width):# Для х в диапазоне (im.по длинне)
+  val=a[y,x]# переменная val = индексы a [y,x]
+  if (val[0]!=255):# если индекс 0 переменной val [red] не равен 255 то :
+   count+=1# счетчик +1
+print('area =',count)# выводим строку и значение count
+
+Метод 3 с внутренним циклом х 
+count=0
+# обнуляем переменную count
+totalarea=0
+# обнуляем переменную totalarea - общая площадь 
+# создаем двойной цикл
+for y in range(im.height): # Для y в диапазоне (im.по высоте)
+ for x in range(im.width): # Для х в диапазоне (im.по длинне)
+  val=a[y,x] # переменная val = индексы a [y,x]
+  if val[0]!=255: # если индекс 0 переменной val [red] не равен 255 то :
+   count+=1 # счетчик +1
+   area=fillarea(a,x,y) # переменной area присваиваем значения от fillarea а именно a, x, y
+   print(' i have found ',count,' figure with area = ',area) # выводим строку и значение count, потом еще строку и значение area
+   totalarea+=area # к переменной totalarea добавляем значение от area
+print('total area is ',totalarea) # выводим строку и значение totalarea
