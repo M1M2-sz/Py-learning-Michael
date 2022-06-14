@@ -73,11 +73,12 @@ a = np.array(im)
 
 #Method1
 count=0
-for y in range(im.height):
- for val in a[y]:   #every point in y row (x)
-  if (val[0]!=255): #check just R from RGB (it is enough)
-   count+=1
-print('area =',count)
+# обнуляем переменную count
+for y in range(im.height):# Для y в диапазоне (im.по высоте)
+ for val in a[y]:# для val в a с индексом [y]
+  if (val[0]!=255):# если индекс 0 переменной val [red] не равен 255 то :
+   count+=1# счетчик +1
+print('area =',count)# выводим строку и значение count
 
 #Method2
 count=0
