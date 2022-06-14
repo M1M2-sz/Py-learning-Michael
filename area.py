@@ -1,5 +1,3 @@
-## Cycles
-
 import numpy as np
 from PIL import Image, ImageDraw
 import sys
@@ -29,7 +27,7 @@ draw.rectangle((30, 40, 40, 45), fill=(0, 0, 0))
 
 
 _xy = (        
-            (50, 50),
+            (350, 450),
             (50+100, 50+20),
             (50+10+20,50+20+10),
             (50+10+20+-20, 50+20+10+10),
@@ -41,10 +39,7 @@ _xy = (
 draw.polygon(xy=_xy, fill='blue', outline=(0, 0, 0))
 
 #im.show()
-arr = np.zeros([150, 250, 3], dtype=np.uint8)
-arr[:,:100] = [255, 128, 0]
-arr[:,100:] = [0, 0, 255]
-img = Image.fromarray(arr)
+
 a = np.array(im)
 #np.setflags(write=1)
 
@@ -81,46 +76,3 @@ print('total area is ',totalarea)
 
 img = Image.fromarray(a)
 img.show()
-
-
-
-## tests
-from PIL import Image, ImageDraw
-import numpy as np
-im = Image.new("RGB", (400,400), "white");
-imgCreation = ImageDraw.Draw(im);
-imgCreation.rectangle ((100, 200, 200, 100), fill ='black');
-im.save('pix.jpg', quality=95)
-im.show();
-## 2
-from PIL import Image
-import numpy as np
-arr = np.zeros([150, 250, 3], dtype=np.uint8)
-arr[:,:100] = [255, 128, 0]
-arr[:,100:] = [0, 0, 255]
-img = Image.fromarray(arr)
-img.show()
-## 3
-a = np.asarray(img)
-count = 0
-blue = [ 0, 0, 255]
-for x in a:
-    if blue in a:   
-        print(blue)
-        count += 1
-print(count)
-## 5
-from PIL import Image, ImageDraw
-import numpy as np
-im = Image.new("RGB", (400,400), "white");
-imgCreation = ImageDraw.Draw(im);
-imgCreation.rectangle ((100, 200, 200, 100), fill ='black');
-im.save('pix.jpg', quality=95)
-im.show();
-
-count=0
-for y in range(im.height):
- for val in a[y]:   #every point in y row (x)
-  if (val[0]!=255): #check just R from RGB (it is enough)
-   count+=1
-print('area =',count)
