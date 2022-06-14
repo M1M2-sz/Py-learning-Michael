@@ -36,16 +36,17 @@ def fillarea(a,x,y): ## Создаем функцию fillarea , с переме
     # В данном случае условие (x>=a.shape[1]) такое: x>= индекса 1 в массиве a
     # ... или условие (y>=a.shape[0]) - такое: y>= индекса 0 в массиве a
     # то return 0       
-  val=a[y,x]  
-  if val[0]==255: #just R
-    return 0
+  val=a[y,x]  # переменная val  принимает значения индексов y и x от a
+  if val[0]==255: # если индекс 0 val равен 255 то
+    return 0 # вернуть 0 
 #  print('x=',x,'y=',y)
 #  a[x,y]=[255,255,255]; #clear point as White
-  a[y,x]=[255,0,0]; #clear point as Red (just for visual purpose)
-  area=1 #at least 1 point is filled
-  for _y in range(-1,2):
-    for _x in range(-1,2):
-      area=area+fillarea(a,x+_x,y+_y)
+  a[y,x]=[255,0,0]; #clear point as Red (just for visual purpose) # Если индексы x и y от a = 255,0,0 то
+  area=1 #at least 1 point is filled # точка заполнена
+  # создаем двойной цикл
+  for _y in range(-1,2): #  для у в диапазоне -1, 2 
+    for _x in range(-1,2):#  для х в диапазоне -1, 2 
+      area=area+fillarea(a,x+_x,y+_y) 
   return area;
 
 im = Image.new('RGB', (270, 400), (255, 255, 255))
