@@ -4,8 +4,13 @@ import sys
 
 print(sys.getrecursionlimit())
 sys.setrecursionlimit(150000)
+stack = 0
 
 def fillarea(a,x,y):
+  
+  stack =+ 1
+  print(x,y)
+
   if (x<0) or (y<0) or (x>=a.shape[1]) or (y>=a.shape[0]): #borders
     return 0
   val=a[y,x]

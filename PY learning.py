@@ -672,4 +672,99 @@ print(mydict3)
 #update()	Updates the dictionary with the specified key-value pairs
 #values()	Returns a list of all the values in the dictionary
 
-## if else
+# if ... else 
+
+# if
+a = 100
+b = 200
+if b > a:
+    print("b is greater than a")
+
+# elif
+a = 100
+b = 100
+if b > a:
+    print("b is greater than a")
+elif a == b:
+    print("a & b are equal")
+
+# else
+a = 100
+b = 10
+if b > a:
+    print("b is greater than a")
+elif a == b:
+    print("a & b are equal")
+else:
+    print("a is greater than b")
+
+# else without elif
+a = 100
+b = 10
+if b > a:
+    print("b is greater than a")
+else:
+    print("a is greater than b")
+
+# if in one string
+a = 100
+b = 10
+if b < a: print("b is greater than a")
+
+# short string if else
+a = 100
+b = 200
+print(b) if a < b else print(a)  
+
+# short string 2 if and 2 else
+a = 200
+b = 200
+print("b =", b) if a < b else print("a = b") if a == b else print("a =", a)   
+
+# and
+a = 1
+b = 2
+c = 2
+
+if a == b and b == c:
+    print("a = b & b = c")
+else: 
+    print("a!=b") 
+
+# or
+a = 1
+b = 2
+c = 2
+
+if a == b or b == c:
+    print("a = b or b = c")
+else: 
+    print("a!=b or b!=c") 
+
+# if in if
+x = 200
+if x < 100:
+    print("x < 100")
+    if x == 100:
+        print("x = 100")
+        if x < 50:
+            print("x < 50")
+            if x < 25:
+                print("x < 25")
+else:
+    print("x > 100")
+
+# empty if - pass
+x = 200
+if x < 100:
+    print("x < 100")
+    if x == 100:
+        print("x = 100")
+        if x < 50:
+            pass
+            if x < 25:
+                print("x < 25")
+else:
+    print("x > 100")
+
+# while
