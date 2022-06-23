@@ -768,3 +768,179 @@ else:
     print("x > 100")
 
 # while
+i = 1
+while i < 666:
+    print(i)
+    i += 1
+
+# while break
+i = 1
+while i < 666:
+    print(i)
+    if i == 333:
+        break
+    i += 1
+
+# while continue
+i = 0
+while i < 666:
+    i += 1
+    if i == 333:
+        continue
+    print(i)
+    
+# while else
+i = 1
+while i < 66:
+    print(i)
+    i += 1
+else:
+    print("is no longer less than 66")
+
+# for
+cars = ["Rolls-Royce", "Bugatti", "Ferrari"]
+for x in cars:
+    print(x)
+
+# for
+cars = ["Rolls-Royce", "Bugatti", "Ferrari"]
+for x in "Bugatti":
+    print(x)
+
+# for break
+cars = ["Rolls-Royce", "Bugatti", "Ferrari"]
+for x in cars:
+    print(x)
+    if x == "Bugatti":
+        break
+
+# for continue
+cars = ["Rolls-Royce", "Bugatti", "Ferrari"]
+for x in cars:
+    if x == "Bugatti":
+        continue
+    print(x)
+
+# for range
+for x in range(6):
+    print(x)
+    
+# for range 2 - 6 
+for x in range(2, 6):
+    print(x)
+
+# for range - step 3
+for x in range(6, 30, 3):
+    print(x)
+
+# else in for
+for x in range(6):
+    print(x)
+else:
+        print("finished!")
+
+# else do not work after break
+for x in range(6):
+    if x == 5:
+        break 
+    print(x)
+else:
+        print("finished!")
+
+# for in for
+cars = ["Rolls-Royce", "Bugatti", "Ferrari"]
+models = ["Phantom", "Veron", "Murcellago"]
+for x in cars:
+    for y in models:
+        print(x, y)
+
+# pass in for
+cars = ["Rolls-Royce", "Bugatti", "Ferrari"]
+for x in cars:
+    pass
+
+
+
+
+# functions
+def myFunction():
+    print("Hello MF!")
+myFunction()
+
+# arguments
+def myFunction(fname):
+    print(fname + " - hello MF!")
+myFunction("Black wood seller")
+myFunction("Sebastian")
+myFunction("Pereiro")
+ 
+# arguments numbers
+def myFunction(fname, lname):
+    print(fname + " - hello MF! " + lname)
+myFunction("Karl", "Klara")
+
+# argument numbers *
+def myFunction(*names):
+    print(names[1] + " - hello MF! ")
+myFunction("Karl", "Klara")
+
+# arguments keys-values
+def myFunction(name1, name2, name3):
+    print(name1 + " - hello MF! ")
+myFunction(name1 = "Black wood seller", name2 = "Sebastian", name3 = "Pereiro")
+
+# diction of arguments **
+def myFunction(**names):
+    print(names["name2"] + " - hello MF! ")
+myFunction(name1 = "Black wood seller", name2 = "Sebastian", name3 = "Pereiro")
+
+# value to default
+def myFunction(country = "Norway"):
+    print(country + " - hello MF!")
+
+myFunction("Black wood seller")
+myFunction("Sebastian")
+myFunction()
+myFunction("Pereiro")
+
+# sending list as argument
+def myFunction(peoples):
+    for x in peoples:
+        print(x)
+
+names = ["Black wood seller", "Sebastian", "Pereiro"]
+
+myFunction(names)
+
+# return values
+def myFunction(x):
+    return 5 * x
+print(myFunction(2))
+print(myFunction(3))
+print(myFunction(4))
+
+# function pass
+def myFunction():
+    pass
+
+# recursion MF!
+def recursion(m):
+    if(m > 0):
+        result = m + recursion(m - 1)
+        print(result)
+    else:
+        result = 0
+    return result
+
+print("recursion results")
+recursion(2)
+
+# 
+
+
+
+
+
+
+
+
