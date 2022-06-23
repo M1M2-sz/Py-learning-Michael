@@ -933,9 +933,28 @@ def recursion(m):
     return result
 
 print("recursion results")
-recursion(2)
+recursion(6)
 
-# 
+# recursion 2 & iterative while
+def recursion(num):
+    if num <= 1:
+        return 1
+    else:
+        return num * recursion(num - 1)
+
+recursion(6)
+
+# while rec:
+def recursionWhile(num):
+    result = 1
+    count = 1
+    while count <= num:
+        result *= count 
+        count += 1
+    return result
+
+print(recursionWhile(6))
+
 
 
 
