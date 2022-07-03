@@ -81,3 +81,20 @@ print('total area is ',totalarea)
 
 img = Image.fromarray(a)
 img.show()
+
+
+#Shape
+import numpy as np
+from PIL import Image, ImageDraw
+
+
+a = [
+  [2,3],
+  [4,5],
+  [6,7],
+  [4,57]
+]
+print(np.shape(a[0]))
+
+
+
