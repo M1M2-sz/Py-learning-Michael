@@ -17,10 +17,8 @@ def fillarea(baba,x,y):
       area=area+fillarea(baba,x+x1,y+y1)#(recursion) - function restart with a new param
   return area
 
-
 image_1 = Image.open('/Users/M1/Downloads/pix1.jpg')
 baba = np.array(image_1)
-
 
 #Method3
 count=0
