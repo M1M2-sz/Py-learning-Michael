@@ -29,7 +29,7 @@ totalarea=0
 for y in range(image_1.height):
  for x in range(image_1.width):
   valuee=baba[y,x]
-  if valuee[0]!=0 and valuee[1]!=255 and valuee[2]!=0:
+  if valuee[0]!=0 or valuee[1]!=0 or valuee[2]!=0:
    count+=1
    area=fillarea(baba,x,y)
    print(' i have found ',count,' figure with area = ',area)
