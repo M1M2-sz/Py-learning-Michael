@@ -12,8 +12,8 @@ def fillarea(baba,x,y):
     return 0
   baba[y,x]=[0,255,0];#green fill 
   area=1 
-  for y1 in range(3):#range 3 step
-    for x1 in range(3):#range 3 step
+  for y1 in range(-1,2):#range 3 step
+    for x1 in range(-1,2):#range 3 step
       area=area+fillarea(baba,x+x1,y+y1)#(recursion) - function restart with a new param
   return area
 
@@ -25,8 +25,9 @@ draw.rectangle((125, 35, 110, 20), fill=(10, 10, 10))
 draw.rectangle((80, 40, 90, 50), fill=(10, 10, 10))
 #Figure 3
 axy = (        
-            (125, 50),
-            (100, 50),
+            (100, 90),
+            (100, 110),
+            (110, 10),
             (100, 75),
             (125, 75)        
       )
