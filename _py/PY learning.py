@@ -923,6 +923,8 @@ print(myFunction(4))
 def myFunction():
     pass
 
+
+
 # recursion MF!
 def recursion(m):
     if(m > 0):
@@ -955,6 +957,81 @@ def recursionWhile(num):
 
 print(recursionWhile(6))
 
+# factorial
+def fact(x):
+    if x == 1:
+        return 1
+    return fact(x-1)*x
+
+print(fact(44))
+
+# fibonacci
+def fib(n):
+    if n == 1:
+        return 0
+    if n == 2:
+        return 1
+    return fib(n-1) + fib(n-2)
+ 
+print(fib(25))
+
+# palindroms
+def palindrom(s):
+    if len(s) <= 1:
+        return True
+    if s[0] != s[-1]:
+        return False
+    return palindrom(s[1:-1])
+
+print(palindrom('шалаш'))
+
+# rec h(e(l)l)o
+def rec(s):
+    if len(s) == 1 or len(s) == 2:
+        return s
+    return s[0] + '(' + rec(s[1: -1])  + ')' + s[-1]
+
+s = input()
+print(rec(s))
+
+# rec degree # x^n # 
+def degree(x,n):
+    if n == 0:
+        return 1
+    if n % 2 == 0:
+        return degree(x, n // 2) * degree(x, n // 2)
+    else:
+        return degree(x, n - 1) * x
+
+x = 100
+n = 3
+print(degree(x,n))
+
+# rec degree # x^-n # 
+def degree(x,n):
+    if n == 0:
+        return 1
+    if n < 0:
+        return 1 / degree(x, -n)
+    if n % 2 == 0:
+        return degree(x, n // 2) * degree(x, n // 2)
+    else:
+        return degree(x, n - 1) * x
+
+x = 2
+n = -1
+print(degree(x,n))
+
+# rec list search
+a = [1, 22, 34, [24, 55, 5, [35, 5, 76, [46, 6, 7], 9 ], 87], 67]
+
+def search(list_,level = 1):
+    print(*list_, 'level = ', level)
+    for i in list_:
+        if type(i) == list:
+            search(i, level + 1)
+
+print(search(a))
 
 
 
