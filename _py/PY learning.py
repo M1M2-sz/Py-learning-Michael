@@ -963,7 +963,7 @@ def fact(x):
         return 1
     return fact(x-1)*x
 
-print(fact(44))
+print(fact())
 
 # fibonacci
 def fib(n):
@@ -973,7 +973,7 @@ def fib(n):
         return 1
     return fib(n-1) + fib(n-2)
  
-print(fib(25))
+print(fib(35))
 
 # palindroms
 def palindrom(s):
