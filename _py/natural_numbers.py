@@ -4,7 +4,7 @@ def NatNum(x):
  sum=1
  for b in range(1,x+1):
    sum=sum*b
- return sum;
+ return sum
 
  print(NatNum(1,250))
 
@@ -20,4 +20,4 @@ def NatNum(x,y):
         if b == a:                  
             print(a,end=" ")
     print('')
-NatNum(1,500)
+NatNum(1,1000)
